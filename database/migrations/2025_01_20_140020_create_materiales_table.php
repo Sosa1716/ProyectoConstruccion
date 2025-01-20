@@ -13,12 +13,15 @@ return new class extends Migration
     {
         Schema::create('materiales', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre'); // Nombre del material
-            $table->text('descripcion')->nullable(); // Descripción
-            $table->string('unidad'); // Unidad de medida (ejemplo: kg, m, pieza)
-            $table->decimal('precio_unitario', 10, 2); // Precio por unidad
-            $table->integer('cantidad_disponible')->default(0); // Cantidad en inventario
+            $table->string('nombre'); 
+            $table->text('descripcion')->nullable(); 
+            $table->string('unidad'); 
+            $table->decimal('precio_unitario', 10, 2); 
+            $table->integer('cantidad_disponible')->default(0); 
             $table->timestamps();
+
+            $table->foreign('proyectos_id')->references('id')->on('proyectos')->onDelete('cascade')->onUpdate('cascade');
+
         });
     }
 

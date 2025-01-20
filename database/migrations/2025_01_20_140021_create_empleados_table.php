@@ -21,6 +21,10 @@ return new class extends Migration
             $table->decimal('salario', 10, 2)->default(0.00); // Salario
             $table->date('fecha_contratacion'); // Fecha de contratación
             $table->timestamps();
+
+
+            $table->foreign('proyectos_id')->references('id')->on('proyectos')->onDelete('cascade')->onUpdate('cascade');
+
         });
     }
 

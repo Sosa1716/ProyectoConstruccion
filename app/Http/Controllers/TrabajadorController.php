@@ -12,8 +12,8 @@ class TrabajadorController extends Controller
 {
     public function index()
     {
-        $trabajadores = Trabajador::paginate(4);
-        return view('admin/trabajadores/index', compact('trabajadores'));
+       // $trabajadores = Trabajador::paginate(4);
+        return view('admin/Personal/index');
     }
 
     /**

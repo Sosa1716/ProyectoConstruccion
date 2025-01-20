@@ -12,8 +12,8 @@ class EmpleadoController extends Controller
 {
     public function index()
     {
-        $empleados = Empleado::paginate(4);
-        return view('admin/Empleados/index', compact('empleados'));
+        //$empleados = Empleado::paginate(4);
+        return view('admin/Empleados/index');
     }
 
     /**
@@ -31,7 +31,7 @@ class EmpleadoController extends Controller
     public function store(StoreRequest $request)
     {
         Empleado::create($request->all());
-        return to_route('empleados.index')->with('status', 'Empleado Registrado');
+        return to_route('Empleados.index')->with('status', 'Empleado Registrado');
     }
 
     /**
@@ -39,7 +39,7 @@ class EmpleadoController extends Controller
      */
     public function show(Empleado $empleado)
     {
-        return view('admin/empleados/show', compact('empleado'));
+        return view('admin/Empleados/show', compact('empleado'));
     }
 
     /**
@@ -48,7 +48,7 @@ class EmpleadoController extends Controller
     public function edit(Empleado $empleado)
     {
         // $departamentos = Departamento::pluck('id', 'nombre'); // Si el empleado tiene un departamento
-        return view('admin/empleados/edit', compact('empleado', 'departamentos'));
+        return view('admin/Empleados/edit', compact('empleado', 'departamentos'));
     }
 
     /**
@@ -57,7 +57,7 @@ class EmpleadoController extends Controller
     public function update(UpdateRequest $request, Empleado $empleado)
     {
         $empleado->update($request->all());
-        return to_route('empleados.index')->with('status', 'Empleado Actualizado');
+        return to_route('Empleados.index')->with('status', 'Empleado Actualizado');
     }
 
     /**
@@ -65,7 +65,7 @@ class EmpleadoController extends Controller
      */
     public function delete(Empleado $empleado)
     {
-        return view('admin/empleados/delete', compact('empleado'));
+        return view('admin/Empleados/delete', compact('empleado'));
     }
 
     /**
@@ -74,7 +74,7 @@ class EmpleadoController extends Controller
     public function destroy(Empleado $empleado)
     {
         $empleado->delete();
-        return to_route('empleados.index')->with('status', 'Empleado Eliminado');
+        return to_route('Empleados.index')->with('status', 'Empleado Eliminado');
     }
 
 }

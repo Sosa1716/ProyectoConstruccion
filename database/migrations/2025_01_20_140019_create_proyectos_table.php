@@ -19,6 +19,7 @@ return new class extends Migration
             $table->date('fecha_fin')->nullable();
             $table->enum('estado', ['pendiente', 'en_progreso', 'completado'])->default('pendiente');
             $table->timestamps();
+
         });
     }
 

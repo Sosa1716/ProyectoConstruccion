@@ -18,6 +18,9 @@ return new class extends Migration
             $table->string('contacto')->nullable();
             $table->boolean('activo')->default(true); 
             $table->timestamps();
+
+            $table->foreign('proyectos_id')->references('id')->on('proyectos')->onDelete('cascade')->onUpdate('cascade');
+
         });
     }
 

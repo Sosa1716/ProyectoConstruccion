@@ -10,6 +10,19 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('index')}}">Inicio</a>
                   </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('empleados.index')}}">Empleados</a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('materiales.index')}}">Materiales</a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('trabajadores.index')}}">Trabajador</a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('proyectos.index')}}">Proyectos</a>
+                  </li>
+                
             </ul>
           </div>
         </div>

@@ -9,7 +9,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-    <body style="background-color: rgb(225, 210, 180)">
+    <body style="background-color:rgb(44, 62, 80)">
 
         @include('fragments.navbar')
         

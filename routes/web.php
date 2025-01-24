@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\EmpleadoController;
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\MaterialController;
-use App\Http\Controllers\TrabajadorController;
-use App\Http\Controllers\ProyectoController;
+use App\Http\Controllers\WorkerController;
+use App\Http\Controllers\ProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,18 +21,22 @@ Route::get('/', function () {
     return view('index');
 }) -> name('index');
 
-Route::resource('/empleados', EmpleadoController::class);
-Route::get('/empleados/{empleado}/delete', [EmpleadoController::class, 'delete'])->name('empleados.delete');
+Route::resource('/employees', App\Http\Controllers\EmployeeController::class);
+Route::get('/employees/{employee}/delete',
+ [EmployeeController::class, 'delete'])->name('employees.delete');
 
 
-Route::resource('/materiales', MaterialController::class);
-Route::get('/materiales/{material}/delete', [MaterialController::class, 'delete'])->name('materiales.delete');
+Route::resource('/materials', App\Http\Controllers\MaterialController::class);
+Route::get('/materials/{material}/delete',
+ [MaterialController::class, 'delete'])->name('materials.delete');
 
 
 
-Route::resource('/trabajadores', TrabajadorController::class);
-Route::get('/trabajadores/{trabajador}/delete', [TrabajadorController::class, 'delete'])->name('trabajadores.delete');
+Route::resource('/workers', App\Http\Controllers\WorkerController::class);
+Route::get('/workers/{worker}/delete', 
+[WorkerController::class, 'delete'])->name('workers.delete');
 
 
-Route::resource('/proyectos', ProyectoController::class);
-Route::get('/proyectos/{proyecto}/delete', [ProyectoController::class, 'delete'])->name('proyectos.delete');
+Route::resource('/projects', App\Http\Controllers\ProjectController::class);
+Route::get('/projects/{project}/delete', 
+[ProjectController::class, 'delete'])->name('projects.delete');

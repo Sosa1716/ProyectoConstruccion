@@ -5,17 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Material extends Model
+class Employee extends Model
 {
     use HasFactory;
 
-    protected $table = 'materials'; // Nombre de la tabla
+    protected $table = 'employees'; 
 
     protected $fillable = [
         'nombre',
-        'descripcion',
-        'unidad',
-        'precio_unitario',
-        'cantidad_disponible',
+        'apellido',
+        'email',
+        'telefono',
+        'puesto',
+        'salario',
+        'fecha_contratacion',
     ];
 }

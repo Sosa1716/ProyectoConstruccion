@@ -19,7 +19,7 @@
             <div class="container text-center text-white vh-100 d-flex flex-column justify-content-center align-items-center" style="position: relative; z-index: 2;">
                 <h1 class="display-4 fw-bold">Bienvenido a Construcciones Sosa</h1>
                 <p class="lead mb-4">Liderando la gestión de proyectos de construcción con innovación y excelencia.</p>
-                <a href="#about" class="btn btn-primary btn-lg">Conoce Más</a>
+                <a href="#about" class="btn btn-primary btn-lg" >Conoce Más</a>
             </div>
         </div>
     </div>
